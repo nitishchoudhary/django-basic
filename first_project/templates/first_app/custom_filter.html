@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'first_app/base.html'%}
+
+{% block block_body%}
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Custom Filter!</h1>
+      {{ text|cut:"about" }}
+    </div>
+  </div>
+  {% endblock%}

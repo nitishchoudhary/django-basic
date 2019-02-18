@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends "first_app/base.html"%}
+
+ {% block block_body%}
+  <h2>Here are you access records</h2>
+    <div class="jumbotron">
+      {% if access_record %}
+        <table>
+          <thead>
+            <th>Site Name</th>
+              <th>Date Accessed</th>
+                </thead>
+                {% for acc in access_record %}
+                  <tr>
+                    <td>{{acc.name}}</td>
+                <td>{{acc.date}}</td>
+              </tr>
+            {% endfor %}
+          </table>
+        {% else %}
+      <p>No record found!</p>
+    {% endif %}
+  </div>
+  {% endblock%}
